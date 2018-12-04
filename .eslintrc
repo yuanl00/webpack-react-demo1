@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "15.0",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [ "forbidExtraProps" ]
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "linebreak-style": [0 ,"error", "windows"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-unused-vars": 0,  
+    "no-console": 0,
+    "semi": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "indent": "off"
+  },
+  "globals": {
+    "document": true,
+    "localStorage": true,
+    "window": true
+  }
+}
