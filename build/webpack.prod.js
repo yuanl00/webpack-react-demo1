@@ -41,11 +41,14 @@ module.exports = merge(webpackBaseConfig, {
     filename: 'static/js/[name].[chunkhash:7].js',
     chunkFilename: 'static/js/[name].[chunkhash:7].js'
   },
+  performance: {
+    hints: false
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, '../dist/index.html'),// 文件写入路径
       template: path.join(__dirname, '../index.html'),// 模板文件路径
-      chunks: ['runtime', 'app', 'commons'],  // 将runtime插入html中
+      chunks: ['runtime', 'app', 'commons', 'vendors'],  // 将runtime插入html中
       chunksSortMode: 'dependency',
       minify: {/* */},
       inject: true // 插入位置
